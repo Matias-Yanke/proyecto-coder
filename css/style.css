@@ -306,7 +306,7 @@ footer h2{
     font-size: 50px;
 }
 /*!-------------MEDIA QUERY----------*/
-@media screen and (max-width: 1080px){
+@media screen and (max-width: 1095px){
     .nuestraHistoria{
         display: block;
         width: 100%;
