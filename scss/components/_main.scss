@@ -1,0 +1,315 @@
+/*------INDEX------*/
+.hero{
+    @include flex(flex, center, center);
+        width: 100%;
+        height:500px;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.434), rgba(0, 0, 0, 0.356)), url(../img/orange.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        flex-direction: column;
+        text-align: center;
+       
+    h2{
+        @include flex(flex, center, center);
+        color: white;
+        font-size: 50px;
+        border: 2px solid white;
+        background-color: $color-secundario;
+        margin: 10px 200px 10px 200px;
+        padding: 10px;
+    }
+    p{
+        color: white;
+        font-size: 20px;
+        margin: 10px 200px 10px 200px;
+        background-color: rgba(0, 0, 0, 0.436);
+
+    }
+    a{
+        text-decoration: none;
+        color: black;
+        background-color: $color-terciario;
+        font-size: 20px;
+        margin: 5px;
+        padding: 5px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    a:hover {
+        background-color: rgba(255, 255, 255, 0.491); 
+        transform: scale(1.2);
+    }
+}
+
+.historia {
+    a {
+      margin: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      img {
+        width: 600px; 
+        transition-duration: 3s;
+      }
+  
+      img:hover {
+        width: 700px;
+      }
+    }
+  }
+.tarjetas{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    div{
+        border: 2px solid black;
+        border-radius: 15px;
+        width: 300px;
+        height: 380px;
+        margin: 20px;
+        text-align: center;
+        img{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius:  15px 15px 0 0;
+
+        }
+        h3{
+            margin-bottom: 10px
+
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            background-color: black;
+            padding: 5px;
+            transition: background-color 0.3s ease;
+
+        }
+        a:hover {
+            background-color: rgb(138, 138, 138); 
+          }
+    }
+}
+/*------NOSOTROS------*/
+.sobreNosotros{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: 500px;
+    background-image: url(../img/desert.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    animation-name: slidein;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-direction: initial;
+    animation-iteration-count: 1;
+    animation-delay: 1s;
+    @keyframes slidein {
+        from{
+            margin-top: 100%;
+            width: 200%;
+    
+        }
+        to{
+            margin-top: 0;
+            width: 100%;
+
+        }
+        
+    }
+
+    h2{
+        color: white;
+        background-color: $color-primario;
+        font-size: 40px;
+        margin: 15px;
+        padding: 15px;
+
+    }
+}
+.nuestraHistoria{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    div{
+        width: 50%;
+        padding: 40px;
+        border: 5px solid black;
+
+        h2{
+        font-size: 35px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        p{
+        font-size: 20px;
+        }
+    }
+}
+/*------PRODUCTOS------*/
+main{
+    h2{
+        background-color: $color-terciario;
+        color: rgba(0, 0, 0, 0.763);
+        text-align: center;
+        padding: 15px;
+
+    }
+    .tienda{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 100px;
+        padding: 20px;
+        margin: 0 100px 0 100px;
+        place-items: center;
+            div{
+            border: 2px solid black;
+            width: 250px;
+            height: 300px;
+            margin: 10px;
+            text-align: center;
+            img{
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+
+            }
+            h3{
+                margin-bottom: 20px;
+
+            }
+            a{
+                text-decoration: none;
+                color: white;
+                background-color: $color-secundario;
+                padding: 5px;
+
+            }
+        }
+    }
+}
+.grid-galeria{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 250px;
+    gap: 15px;
+    div{
+        position: relative;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        h3{
+            position: absolute;
+            bottom: 0;
+            color: white;
+            padding: 5px;
+        }
+    }
+}
+.img1{
+    grid-row: span 2;
+}
+.img4{
+    grid-row: span 2;
+}
+.img7{
+    grid-row: span 2;
+}
+/*------CONTACTO------*/
+form{
+    margin: 0 auto;
+    width: 300px;
+    padding: 10px;
+    color: rgb(43, 43, 43);
+    border-radius: 3px;
+    font-size: 15px;
+    div{
+        input, textarea{
+            outline-style: none;
+            padding: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    }
+}
+.input{
+    width: 280px;
+}
+.boton{
+    text-align: center;
+    color: white;
+    background-color: black;
+    width: 100%;
+}
+.centrarBoton{
+    text-align: center;
+}
+.formularioContacto{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto
+}
+.iframe{
+    border: 2px solid black;
+}
+.fixed{
+    position: fixed;
+    bottom: 200px;
+    right: 10px;
+}
+/*------SERVICIOS------*/
+.carousel{
+    div{
+        img{
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+
+        }
+    }
+}
+.politicaDeCancelacion{
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+    border: 2px solid black;
+    padding: 25px;
+    margin: 10px 15% 10px 15%;
+}
+.politicaDeCancelacion{
+    h2{
+        font-size: nth($size, 4);
+        background-color: rgba(128, 128, 128, 0.443);
+    }
+}
+.politicaDeCancelacion{
+    h3{
+        font-size: nth($size, 3);
+        background-color: rgba(128, 128, 128, 0.311);
+
+    }
+}
+.politicaDeCancelacion{
+    p{
+        ul{
+            font-size: nth($size, 2);
+            background-color: rgba(128, 128, 128, 0.119);
+            list-style: none;
+
+        }
+    }
+}
