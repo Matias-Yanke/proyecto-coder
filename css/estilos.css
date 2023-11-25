@@ -29,21 +29,21 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 50px;
+    font-size: 40px;
     border: 2px solid white;
     background-color: rgba(0, 0, 0, 0.436);
     margin: 10px 200px 10px 200px;
     padding: 10px; }
   .hero p {
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     margin: 10px 200px 10px 200px;
     background-color: rgba(0, 0, 0, 0.436); }
   .hero a {
     text-decoration: none;
     color: black;
     background-color: rgba(193, 192, 192, 0.79);
-    font-size: 20px;
+    font-size: 18px;
     margin: 5px;
     padding: 5px;
     transition: background-color 0.3s ease, transform 0.3s ease; }
@@ -57,8 +57,8 @@ body {
   justify-content: center;
   align-items: center; }
   .historia a img {
-    width: 600px;
-    transition-duration: 3s; }
+    width: 40%;
+    transition: width 2s ease-in-out; }
   .historia a img:hover {
     width: 700px; }
 
@@ -130,8 +130,9 @@ body {
   text-align: center; }
   .nuestraHistoria div {
     width: 50%;
+    height: 430px;
     padding: 40px;
-    border: 5px solid black; }
+    border: 1px solid black; }
     .nuestraHistoria div h2 {
       font-size: 35px;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
@@ -145,26 +146,26 @@ main h2 {
   text-align: center;
   padding: 15px; }
 
-main .tienda {
+.tienda {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 100px;
   padding: 20px;
   margin: 0 100px 0 100px;
   place-items: center; }
-  main .tienda div {
+  .tienda div {
     border: 2px solid black;
     width: 250px;
     height: 300px;
     margin: 10px;
     text-align: center; }
-    main .tienda div img {
+    .tienda div img {
       width: 100%;
       height: 200px;
       object-fit: cover; }
-    main .tienda div h3 {
+    .tienda div h3 {
       margin-bottom: 20px; }
-    main .tienda div a {
+    .tienda div a {
       text-decoration: none;
       color: white;
       background-color: rgba(0, 0, 0, 0.436);
@@ -285,23 +286,51 @@ footer {
       height: 100%;
       text-align: center;
       justify-content: center;
-      border: none; } }
+      border: none; }
+  .politicaDeCancelacion {
+    border: none;
+    margin: 0; } }
 
 @media screen and (max-width: 986px) {
-  .hero
-h2 {
+  .hero h2 {
     font-size: 30px;
     margin: auto;
     padding: auto; }
-  p {
+  .hero p {
     font-size: 18px;
     margin: auto; }
-  a {
+  .hero a {
     font-size: 10px;
     margin: auto;
     padding: auto; }
   .sobreNosotros {
-    width: 100%; } }
+    width: 100%; }
+  .tienda {
+    margin: 0;
+    gap: 0; }
+  .grid-galeria {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; }
+    .grid-galeria div {
+      border: 2px solid black;
+      border-radius: 15px;
+      width: 300px;
+      height: 300px;
+      margin: 20px; }
+      .grid-galeria div img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px; }
+      .grid-galeria div h3 {
+        margin: 15px;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        border-radius: 4px;
+        background-color: rgba(254, 254, 254, 0.89);
+        padding: 5px; } }
 
 @media screen and (max-width: 768px) {
   .hero h2 {
@@ -314,11 +343,18 @@ h2 {
   .hero a {
     font-size: 8px;
     margin: auto;
-    padding: auto; }
-  .formularioContacto {
-    flex-direction: column; }
-  form {
-    width: 100%; } }
+    padding: auto; } }
+
+.formularioContacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .formularioContacto form .iframe {
+    width: 100%; }
+    .formularioContacto form .iframe iframe {
+      width: 250px;
+      height: 150px; }
 
 @media screen and (max-width: 605px) {
   .historia img {
